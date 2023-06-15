@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "db-migrator"
+version = "0.1.0"
+description = ""
+authors = ["Sugat Bajracharya <sugatbajracharya49@gmail.com>", "Ajesh Sen Thapa <aj3sshh@gmail.com>"]
+readme = "README.md"
+packages = [{include = "db_migrator"}]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+pymongo = "^4.3.3"
+
+[tool.poetry.group.dev.dependencies]
+black = "^23.3.0"
+pylint = "2.13.5"
+flake8 = "5.0.0"
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.3.2"
+pytest-cov = "^4.1.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = "-vvv"
+testpaths = ["tests"]
